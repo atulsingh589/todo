@@ -1,0 +1,15 @@
+app.controller("loginCtrl",function($scope,$loginService,$localStorage){
+    $scope.user={};
+    if($localStorage.hasOwnProperty('user'))
+    {
+        location.href="#/todo"
+    }
+    $scope.submit=function(){
+        $loginService.login($scope.user).then(function(res){
+            $localStorage.user=res.data;
+            location.href="#/todo";
+        },function(err){
+            $scope.error=err;
+        })
+    }
+})

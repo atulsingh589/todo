@@ -1,0 +1,22 @@
+<h1>TODO</h1> <button ng-click="logout()">Logout</button><br>
+<form ng-submit="todo.id?update():add()">
+    <div>
+        <label>To Do Task</label><br/>
+        <textarea ng-model="todo.todo"></textarea>
+    </div>
+<input type="submit" value="{{todo.id?'Update':'Add'}}">
+</form>
+<table>
+    <thead>
+    <th>Serial</th>
+        <th>Todo List</th>
+        <th>Action</th>
+    </thead>
+    <tbody>
+    <tr ng-repeat="todo in todolist">
+        <td>{{$index+1}}</td>
+        <td>{{todo.todo}}</td>
+        <td><button ng-click="delete(todo.id)">Delete</button>/<button ng-click="edit(todo)">Edit</button></td>
+    </tr>
+    </tbody>
+</table>

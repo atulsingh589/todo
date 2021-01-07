@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ToDo list</title>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script src="bower_components/ngstorage/ngStorage.min.js"></script>
+    <script src="app.js"></script>
+    <script src="controller/mainCtrl.js"></script>
+    <script src="controller/loginCtrl.js"></script>
+    <script src="controller/todoCtrl.js"></script>
+    <script src="services/mainService.js"></script>
+    <script src="services/loginService.js"></script>
+    <script src="services/todoService.js"></script>
+</head>
+<body ng-app="todo" ng-controller="mainCtrl">
+<div ng-view></div>
+</body>
+</html>
